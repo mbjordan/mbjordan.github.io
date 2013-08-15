@@ -3,8 +3,6 @@ layout: post_page
 title: Multiple GitHub Branches in one Directory
 ---
 
-# Master branch & gh-pages branch
-
 ### Intended directory structure
 
     Repo-Name/
