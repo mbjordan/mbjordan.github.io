@@ -81,7 +81,7 @@ body {
 	font-size:14px;
 	line-height:20px;
 	color:#333;
-	background-color:#fff
+	background-color:#33CC33
 }
 a {
 	color:#08c;
@@ -1791,7 +1791,7 @@ background:#778da8
 	font-size:4.1em;
 	margin-top:1em;
 	letter-spacing:0.04em;
-	color:#81b71a
+	color:#0099CC
 }
 .content .sub-title {
 	font-family:'Raleway';
@@ -1817,7 +1817,7 @@ background:#778da8
 }
 .entries h3 {
 	font-family:'Raleway';
-	color:#81b71a;
+	color:#0099CC;
 	font-weight:normal;
 	font-size:2em;
 	margin-top:0.2em
@@ -1846,7 +1846,7 @@ background:#778da8
 	font-size:2.2em;
 	margin:1.9em 0 -1.1em 1em;
 	float:left;
-	background-color:#81b71a;
+	background-color:#0099CC;
 	padding:0.65em;
 	-webkit-border-radius:2em;
 	-moz-border-radius:2em;
@@ -1873,7 +1873,7 @@ background:#778da8
 	font-size:5em;
 	padding:1.1em 0 0.2em;
 	letter-spacing:0.05em;
-	color:#81b71a
+	color:#0099CC
 }
 .post h2 span {
 	font-family:"Helvetica Neue", Helvetica, Arial, sans-serif
