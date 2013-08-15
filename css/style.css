@@ -1779,7 +1779,7 @@ background:#778da8
 	filter:alpha(opacity=50)
 }
 .content {
-	background-color:#f9f7f4
+	background-color:#F5F5F5
 }
 .content>.container {
 	min-height:58em
@@ -1788,7 +1788,7 @@ background:#778da8
 	font-family:'Raleway';
 	text-transform:uppercase;
 	font-weight:normal;
-	font-size:4.1em;
+	font-size:2.1em;
 	margin-top:1em;
 	letter-spacing:0.04em;
 	color:#0099CC
