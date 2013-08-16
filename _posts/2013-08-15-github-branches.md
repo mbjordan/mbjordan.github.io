@@ -20,7 +20,6 @@ First, create a main directory, then add the `master` branch locally.
 
 > `repo-name` should be the name of your repository.
 
-
 Now we add the `gh-pages` branch locally.
 
     $ git clone git@github.com:username/repo.git gh-pages
