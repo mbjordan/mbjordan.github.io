@@ -17,20 +17,24 @@ This is a simple method of adding multiple branches to one working directory. Wh
 
 First, create a main directory, then add the `master` branch locally.
 
-    $ cd ~/Documents/GitHub
-    $ mkdir repo-name
-    $ cd repo-name
-    $ git clone git@github.com:username/repo.git master
+```shell
+$ cd ~/Documents/GitHub
+$ mkdir repo-name
+$ cd repo-name
+$ git clone git@github.com:username/repo.git master
+```
 
 > `repo-name` should be the name of your repository.
 
 Now we add the `gh-pages` branch locally.
 
-    $ git clone git@github.com:username/repo.git gh-pages
-    $ cd gh-pages
-    $ git checkout origin/gh-pages -b gh-pages
-    $ git branch -d master
-    $ git branch
+```shell
+$ git clone git@github.com:username/repo.git gh-pages
+$ cd gh-pages
+$ git checkout origin/gh-pages -b gh-pages
+$ git branch -d master
+$ git branch
+```
 
 > Please note: running `git clone git@github.com:username/repo.git XXX` will create a directory named XXX. Alternatively, you can `mkdir` a directory, `cd` into it and use a period `.` to use the current dir.
 

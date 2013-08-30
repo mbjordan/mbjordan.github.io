@@ -1,4 +1,4 @@
-pygments: true
+markdown: redcarpet
 title : Matt Jordan
 production_url : http://matthewbjordan.me
 description: Randomized
