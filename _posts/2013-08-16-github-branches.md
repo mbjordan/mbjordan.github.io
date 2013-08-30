@@ -29,3 +29,7 @@ Now we add the `gh-pages` branch locally.
     $ git branch
 
 > Please note: running `git clone git@github.com:username/repo.git XXX` will create a directory named XXX. Alternatively, you can `mkdir` a directory, `cd` into it and use a period `.` to use the current dir.
+
+---
+
+[Comment on Hacker News](https://news.ycombinator.com/item?id=6303236)
