@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
-gem 'sass'
+gem 'rake'
+gem 'rdiscount'
 gem 'jekyll'
-gem 'nokogiri'
+
+gem 'rmagick'
+
