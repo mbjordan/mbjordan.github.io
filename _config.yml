@@ -1,8 +1,4 @@
-markdown: rdiscount
 pygments: true
-permalink: /posts/:title
-rdiscount:
-  extensions: [smart]
 title : Matt Jordan
 production_url : http://matthewbjordan.me/
 description: Randomized
