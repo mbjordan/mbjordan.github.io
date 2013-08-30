@@ -3,6 +3,10 @@ layout: post_page
 title: Multiple GitHub Branches in one Directory
 ---
 
+GitHub repos that also have a Pages branch are getting more commonplace, and maintaining these branches can a pain in the ass.
+
+This is a simple method of adding multiple branches to one working directory. While I am only discussing adding `master` and `gh-pages` branches, The idea can be used for any branch.
+
 ### Intended directory structure
 
     Repo-Name/
