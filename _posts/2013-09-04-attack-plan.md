@@ -20,4 +20,4 @@ I figure the last four don't need much explanation beyond what they already are.
 
 ---
 
-[Comment on Hacker News](#!)
+[Comment on Hacker News](https://news.ycombinator.com/item?id=6334097)
