@@ -7,3 +7,4 @@ author :
   twitter : matthewbjordan
   email: mbj755@gmail.com
 exclude: ["Gemfile", "Gemfile.lock", 'sass', 'watch.sh', 'style.scss'] # files to exclude
+markdown: kramdown
