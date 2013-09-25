@@ -4,7 +4,7 @@ description: Randomized
 author :
   name : Matt Jordan
   github : mbjordan
-  twitter : matthewbjordan
+  twitter : honyovk
   email: mbj755@gmail.com
 exclude: ["Gemfile", "Gemfile.lock", 'sass', 'watch.sh', 'style.scss'] # files to exclude
 markdown: kramdown
