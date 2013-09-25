@@ -20,3 +20,7 @@ Now, if one is using jQuery, then obviously this is a good idea. The gist of the
 But, if one does not use jQuery (either at all or not for a specific project), the same performance improvement can be seen by declaring your own `noop`--as I have done before.
 
 The will enable you to reuse the same noop as many times as needed without re-declaring a new empty fuction each time...
+
+---
+
+[Comment on Hacker News](https://news.ycombinator.com/item?id=6447779)
