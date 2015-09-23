@@ -3,11 +3,14 @@ title: Branching for Github Pages
 author: honyovk
 date: 2013-08-16
 template: article.jade
+intro: GitHub repos that also have a Pages branch are getting more commonplace, and maintaining these branches can a pain in the ass.\n\nThis is a simple method of adding multiple branches to one working directory. While I am only discussing adding `master` and `gh-pages` branches, the idea can be used for any branch.
 ---
 
 GitHub repos that also have a Pages branch are getting more commonplace, and maintaining these branches can a pain in the ass.
 
 This is a simple method of adding multiple branches to one working directory. While I am only discussing adding `master` and `gh-pages` branches, the idea can be used for any branch.
+
+<span class="more"></span>
 
 ### Intended directory structure
 
