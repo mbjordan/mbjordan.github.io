@@ -4,27 +4,25 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width">
-    <title>Branching for Github Pages - Honyovk
+    <title>Branching for Github Pages - honyovk
     </title>
-    <link rel="alternate" href="http://honyovk.com/feed.xml" type="application/rss+xml" title="Stuff about things">
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
     <link rel="stylesheet" href="/css/main.css">
-    <script>
-      window.heap=window.heap||[],heap.load=function(t,e){window.heap.appid=t,window.heap.config=e;var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+t+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(t){return function(){heap.push([t].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};heap.load("651665893");
-      
-    </script>
   </head>
-  <body class="article-detail">
-    <header class="header">
-      <div class="content-wrap">
-        <h1>Branching for Github Pages</h1>
-        <p class="author">Written<span> Aug 16, 2013 </span>by Matt Jordan</p>
+  <body>
+    <aside>
+      <h1><a href="http://honyovk.com">honyovk</a></h1>
+      <p class="description">Stuff about Things</p>
+      <div class="footer">
+        <div class="nav"><a href="/">« Full blog</a></div>
+        <p>&copy; 2015 <a href="https://twitter.com/honyovk">Matt Jordan</a></p>
       </div>
-    </header>
+    </aside>
     <div id="content">
-      <div class="content-wrap">
-        <article class="article">
-          <section class="content"><p>GitHub repos that also have a Pages branch are getting more commonplace, and maintaining these branches can a pain in the&nbsp;ass.</p>
+      <h2>Branching for Github Pages</h2>
+      <p class="author">Written<span> Aug 16, 2013 </span>by Matt Jordan</p>
+      <article class="article">
+        <section class="content"><p>GitHub repos that also have a Pages branch are getting more commonplace, and maintaining these branches can a pain in the&nbsp;ass.</p>
 <p>This is a simple method of adding multiple branches to one working directory. While I am only discussing adding <code>master</code> and <code>gh-pages</code> branches, the idea can be used for any&nbsp;branch.</p>
 <h3 id="intended-directory-structure">Intended directory&nbsp;structure</h3>
 <pre><code>Repo-Name/
@@ -45,29 +43,7 @@ $ git branch -d master
 $ git branch
 </code></pre><p><em>Please note: running <code>git clone git@github.com:username/repo.git XXX</code> will create a directory named <span class="caps">XXX</span>. Alternatively, you can <code>mkdir</code> a directory, <code>cd</code> into it and use a period <code>.</code> to use the current&nbsp;dir.</em></p>
 </section>
-        </article>
-      </div>
+      </article>
     </div>
-    <footer>
-      <div class="content-wrap">
-        <div class="nav"><a href="/">« Full blog</a></div>
-        <section class="about"><h2 id="about">About</h2>
-<p>Matt Jordan, Integration Engineer, and a lot of other things too.</p>
-<h2 id="something-special">Something Special</h2>
-<p><em>They say you should never mix business with pleasure. Really? Well, then explain to me how a putt-putt golf company operates.</em>&nbsp;&nbsp;&nbsp;
-<strong><a href="http://en.wikipedia.org/wiki/Andy_Bernard">-Andy Bernard</a></strong></p>
-<h2 id="else">Else</h2>
-<ul>
-<li><a href="https://twitter.com/honyovk">Twitter</a></li>
-<li><a href="https://github.com/mbjordan">Github</a></li>
-<li><a href="https://www.linkedin.com/in/mbjordan">LinkedIn</a></li>
-</ul>
-
-        </section>
-        <section class="copy">
-          <p>&copy; 2015 Matt Jordan</p>
-        </section>
-      </div>
-    </footer>
   </body>
 </html>

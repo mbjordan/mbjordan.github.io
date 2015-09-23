@@ -5,10 +5,10 @@ block content
   each article in articles
     article.article.intro
       header
-        p.date
-          span= moment.utc(article.date).format('DD. MMMM YYYY')
         h2
           a(href=article.url)= article.title
+        p.date
+          span= moment.utc(article.date).format('MMMM DD, YYYY')
       section.content
         | !{ typogr(article.intro).typogrify() }
         if article.hasMore
@@ -23,6 +23,3 @@ block prepend footer
       a(href='/archive.html') « Archives
     if nextPage
       a(href=nextPage.url) Next page »
-
-
-

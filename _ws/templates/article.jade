@@ -1,4 +1,3 @@
-
 extends layout
 
 block append vars
@@ -9,7 +8,7 @@ block prepend title
 
 block header
   include author
-  h1= page.title
+  h2= page.title
   p.author
     | Written
     span= " " + moment.utc(page.metadata.date).format('MMM DD, YYYY') + " "

@@ -1,9 +1,10 @@
 {
     "locals": {
         "url": "http://honyovk.com",
-        "name": "Honyovk",
+        "name": "honyovk",
         "owner": "Matt Jordan",
-        "description": "Stuff about things"
+        "description": "Stuff about Things",
+        "twitter": "https://twitter.com/honyovk"
     },
     "plugins": [
     "./plugins/paginator.coffee"
@@ -11,12 +12,13 @@
     "require": {
         "moment": "moment",
         "_": "underscore",
-        "typogr": "typogr"
+        "typogr": "typogr",
+        "marked": "marked"
     },
     "jade": {
         "pretty": true
     },
-    "markdown": {
+    "markdown ": {
         "smartLists": true,
         "smartypants": true
     },
