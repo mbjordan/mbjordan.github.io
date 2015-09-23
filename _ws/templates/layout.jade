@@ -14,20 +14,19 @@ html(lang='en')
       link(rel='stylesheet', href='/css/main.css')
   body
 
-      #content
-          block header
-          block content
+      aside
+          h1
+              a(href=locals.url)= locals.name
+          p.description= locals.description
 
           .footer
               block footer
                   p &copy; #{ new Date().getFullYear() } 
                       a(href=locals.twitter)= locals.owner
 
-
-      aside
-          h1
-              a(href=locals.url)= locals.name
-          p.description= locals.description
+      #content
+          block header
+          block content
 
           .footer
               block footer
