@@ -16,7 +16,7 @@
         "marked": "marked"
     },
     "jade": {
-        "pretty": true
+        "pretty": false
     },
     "markdown ": {
         "smartLists": true,

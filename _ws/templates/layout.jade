@@ -11,8 +11,19 @@ html(lang='en')
           block title
               = locals.name
       link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css')
-      link(rel='stylesheet', href='/css/main.css')
+      link(rel='stylesheet', href='/css/main.min.css')
   body
+
+      #content
+          block header
+          block content
+
+          .footer
+              block footer
+                  p &copy; #{ new Date().getFullYear() } 
+                      a(href=locals.twitter)= locals.owner
+
+
       aside
           h1
               a(href=locals.url)= locals.name
@@ -22,7 +33,3 @@ html(lang='en')
               block footer
                   p &copy; #{ new Date().getFullYear() } 
                       a(href=locals.twitter)= locals.owner
-      
-      #content
-          block header
-          block content

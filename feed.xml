@@ -1,19 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>honyovk</title>
-    <atom:link href="http://honyovk.com/feed.xml" rel="self" type="application/rss+xml"></atom:link>
-    <link>http://honyovk.com</link>
-    <description>Stuff about Things</description>
-    <pubDate>Thu, 15  Aug 2013 20:00:00 -0400</pubDate>
-    <language>en</language>
-    <item>
-      <title>Branching for Github Pages</title>
-      <link>http://honyovk.com/articles/branching-github-pages/</link>
-      <author></author>
-      <pubDate>Thu, 15  Aug 2013 20:00:00 -0400</pubDate>
-      <guid isPermaLink="true">http://honyovk.com/articles/branching-github-pages/</guid>
-      <description>&lt;p&gt;GitHub repos that also have a Pages branch are getting more commonplace, and maintaining these branches can a pain in the ass.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>honyovk</title><atom:link href="http://honyovk.com/feed.xml" rel="self" type="application/rss+xml"></atom:link><link>http://honyovk.com</link><description>Stuff about Things</description><pubDate>Thu, 15  Aug 2013 20:00:00 -0400</pubDate><language>en</language><item><title>Branching for Github Pages</title><link>http://honyovk.com/articles/branching-github-pages/</link><author></author><pubDate>Thu, 15  Aug 2013 20:00:00 -0400</pubDate><guid isPermaLink="true">http://honyovk.com/articles/branching-github-pages/</guid><description>&lt;p&gt;GitHub repos that also have a Pages branch are getting more commonplace, and maintaining these branches can a pain in the ass.&lt;/p&gt;
 &lt;p&gt;This is a simple method of adding multiple branches to one working directory. While I am only discussing adding &lt;code&gt;master&lt;/code&gt; and &lt;code&gt;gh-pages&lt;/code&gt; branches, the idea can be used for any branch.&lt;/p&gt;
 &lt;h3 id=&quot;intended-directory-structure&quot;&gt;Intended directory structure&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;Repo-Name/
@@ -33,7 +18,4 @@ $ git checkout origin/gh-pages -b gh-pages
 $ git branch -d master
 $ git branch
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;Please note: running &lt;code&gt;git clone git@github.com:username/repo.git XXX&lt;/code&gt; will create a directory named XXX. Alternatively, you can &lt;code&gt;mkdir&lt;/code&gt; a directory, &lt;code&gt;cd&lt;/code&gt; into it and use a period &lt;code&gt;.&lt;/code&gt; to use the current dir.&lt;/em&gt;&lt;/p&gt;
-</description>
-    </item>
-  </channel>
-</rss>
+</description></item></channel></rss>
