@@ -2,21 +2,15 @@
 <p>This is a simple method of adding multiple branches to one working directory. While I am only discussing adding <code>master</code> and <code>gh-pages</code> branches, the idea can be used for any&nbsp;branch.</p>
 <p><span class="more"></span></p>
 <h3 id="intended-directory-structure">Intended directory&nbsp;structure</h3>
-<pre><code>Repo-Name/
-Repo-Name/master
-Repo-Name/gh-pages
-</code></pre><h3 id="how-to-">How&nbsp;to:</h3>
+<script src="https://gist.github.com/mbjordan/7f52d9ca652256958b30.js?file=IntendedDirectoryStructure"></script>
+
+<h3 id="how-to-">How&nbsp;to:</h3>
 <p>First, create a main directory, then add the <code>master</code> branch&nbsp;locally.</p>
-<pre><code>$ cd ~/Documents/GitHub
-$ mkdir repo-name
-$ cd repo-name
-$ git clone git@github.com:username/repo.git master
-</code></pre><p><em><code>repo-name</code> should be the name of your&nbsp;repository.</em></p>
+<script src="https://gist.github.com/mbjordan/7f52d9ca652256958b30.js?file=howTo1.sh"></script>
+
+<p><em><code>repo-name</code> should be the name of your&nbsp;repository.</em></p>
 <p>Now we add the <code>gh-pages</code> branch&nbsp;locally.</p>
-<pre><code>$ git clone git@github.com:username/repo.git gh-pages
-$ cd gh-pages
-$ git checkout origin/gh-pages -b gh-pages
-$ git branch -d master
-$ git branch
-</code></pre><p><em>Please note: running <code>git clone git@github.com:username/repo.git XXX</code> will create a directory named <span class="caps">XXX</span>. Alternatively, you can <code>mkdir</code> a directory, <code>cd</code> into it and use a period <code>.</code> to use the current&nbsp;dir.</em></p>
+<script src="https://gist.github.com/mbjordan/7f52d9ca652256958b30.js?file=howTo2.sh"></script>
+
+<p><em>Please note: running <code>git clone git@github.com:username/repo.git XXX</code> will create a directory named <span class="caps">XXX</span>. Alternatively, you can <code>mkdir</code> a directory, <code>cd</code> into it and use a period <code>.</code> to use the current&nbsp;dir.</em></p>
 </section></article><div class="footer"><div class="nav"><a href="/">« Full blog</a></div><p>&copy; 2015 <a href="https://twitter.com/honyovk">Matt Jordan</a></p></div></div></body></html>

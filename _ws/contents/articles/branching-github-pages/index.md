@@ -14,33 +14,18 @@ This is a simple method of adding multiple branches to one working directory. Wh
 
 ### Intended directory structure
 
-```
-Repo-Name/
-Repo-Name/master
-Repo-Name/gh-pages
-```
+<script src="https://gist.github.com/mbjordan/7f52d9ca652256958b30.js?file=IntendedDirectoryStructure"></script>
 
 ### How to:
 
 First, create a main directory, then add the `master` branch locally.
 
-```
-$ cd ~/Documents/GitHub
-$ mkdir repo-name
-$ cd repo-name
-$ git clone git@github.com:username/repo.git master
-```
+<script src="https://gist.github.com/mbjordan/7f52d9ca652256958b30.js?file=howTo1.sh"></script>
 
 _`repo-name` should be the name of your repository._
 
 Now we add the `gh-pages` branch locally.
 
-```
-$ git clone git@github.com:username/repo.git gh-pages
-$ cd gh-pages
-$ git checkout origin/gh-pages -b gh-pages
-$ git branch -d master
-$ git branch
-```
+<script src="https://gist.github.com/mbjordan/7f52d9ca652256958b30.js?file=howTo2.sh"></script>
 
 _Please note: running `git clone git@github.com:username/repo.git XXX` will create a directory named XXX. Alternatively, you can `mkdir` a directory, `cd` into it and use a period `.` to use the current dir._
