@@ -1,57 +1,72 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic,600italic,600);
+@import url(//fonts.googleapis.com/css?family=Source+Code+Pro|400,400italic,700,700italic,600italic,600);
+
 html {
     font-family: 'Open Sans', sans-serif;
-    font-size: 20px;
+    font-size: 20px
+}
+
+body a, #content a {
+    color: #f26233;
+    text-decoration: none
+}
+
+body a:hover, #content a:hover {
+    color: #f69373;
+    text-decoration: none
+}
+
+* .footer {
+    text-align: center
+}
+
+body > .footer {
+    display: none;
+    border-top: 1px solid #aaa
+}
+
+blockquote {
+    background-color: #f0f0f0;
+    border-left: 8px solid #e3e3e3;
+    font-size: 0.9em;
+    margin: 0;
+    padding: 1px 8px;
+}
+
+:not(pre) > code {
+    background-color: #e9e9e9;
+    font-family: "Source Code Pro",sans-serif;
+    font-size: 0.8em;
+    padding: 1px 3px;
 }
 
 #content {
     background-color: #fff;
     padding: 24px 100px 100px 400px;
-    color: #555;
+    color: #555
 }
 
-#content a {
-    color: #f26233;
-    text-decoration: none;
-}
-
-#content a:hover {
-    color: #f69373;
-    text-decoration: none;
-}
-
-* .footer {
-    text-align: center;
-}
-
-#content .footer {
-    display: none;
-    border-top: 1px solid #aaa;
-}
-
-#content p.more {
+#content .article.intro {
     border-bottom: 1px solid #ddd;
-    padding-bottom: 11px;
+    padding-bottom: 11px
 }
 
-#content p.more:last-child {
+#content article.intro:last-child {
     border-bottom: none;
-    padding-bottom: 0;
+    padding-bottom: 0
 }
 
 #content p.more a {
     background-color: #f69373;
     color: #fff;
-    border-radius: 3px;
     cursor: pointer;
     display: inline-block;
     padding: 5px 10px;
     font-size: 0.9em;
-    transition: background-color 0.2s ease-in-out 0s;
+    transition: background-color 0.2s ease-in-out 0s
 }
 
 #content p.more a:hover {
-    background-color: #f26233;
+    background-color: #f26233
 }
 
 aside {
@@ -62,12 +77,12 @@ aside {
     height: 100%;
     background-color: #f26233;
     color: #fff;
-    padding: 0 24px;
+    padding: 0 24px
 }
 
 aside h1 a {
     color: #fff;
-    text-decoration: none;
+    text-decoration: none
 }
 
 aside div.footer {
@@ -75,58 +90,58 @@ aside div.footer {
     font-size: 0.7em;
     left: 0;
     position: absolute;
-    width: 100%;
+    width: 100%
 }
 
 aside div.footer a {
-    color: #fcddd3;
+    color: #fcddd3
 }
 
 aside div.footer a:hover {
-    color: #fff;
+    color: #fff
 }
 
 p.date, p.author {
     font-size: 0.8em;
-    color: #d0d0d0;
+    color: #d0d0d0
 }
 
 @media screen and (min-width: 601px) and (max-width: 800px) {
     html {
-        font-size: 18px;
+        font-size: 18px
     }
     #content {
-        padding: 24px 66px 24px 316px;
+        padding: 24px 66px 24px 316px
     }
     aside {
-        width: 202px;
+        width: 202px
     }
 }
 
 @media screen and (min-width: 320px) and (max-width: 600px) {
     html {
-        font-size: 16px;
+        font-size: 16px
     }
     #content {
-        padding: 0 16px;
+        padding: 0 16px
     }
-    #content .footer {
+    body > .footer {
         display: block;
         margin: 56px 0 0;
-        padding: 18px 0 0;
+        padding: 18px 0 0
     }
     aside {
         height: auto;
         padding: 0 0 1px;
         position: relative;
         text-align: center;
-        width: 100%;
+        width: 100%
     }
     aside h1 {
         margin-top: 0;
-        padding-top: 14px;
+        padding-top: 14px
     }
     aside div.footer {
-        display: none;
+        display: none
     }
 }
