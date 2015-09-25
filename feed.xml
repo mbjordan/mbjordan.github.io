@@ -1,4 +1,22 @@
-<?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>honyovk</title><atom:link href="https://honyovk.com/feed.xml" rel="self" type="application/rss+xml"></atom:link><link>https://honyovk.com</link><description>Stuff about Things</description><pubDate>Thu, 15  Aug 2013 20:00:00 -0400</pubDate><language>en</language><item><title>Branching for Github Pages</title><link>https://honyovk.com/articles/branching-github-pages/</link><author></author><pubDate>Thu, 15  Aug 2013 20:00:00 -0400</pubDate><guid isPermaLink="true">https://honyovk.com/articles/branching-github-pages/</guid><description>&lt;p&gt;GitHub repos that also have a Pages branch are getting more commonplace, and maintaining these branches can a pain in the ass.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>honyovk</title><atom:link href="https://honyovk.com/feed.xml" rel="self" type="application/rss+xml"></atom:link><link>https://honyovk.com</link><description>Stuff about Things</description><pubDate>Fri, 25 Sep 2015 20:00:00 -0400</pubDate><language>en</language><item><title>Partial Functions in JavaScript</title><link>https://honyovk.com/articles/partial-functions-javascript/</link><author></author><pubDate>Fri, 25 Sep 2015 20:00:00 -0400</pubDate><guid isPermaLink="true">https://honyovk.com/articles/partial-functions-javascript/</guid><description>&lt;p&gt;A partial is a function that returns a new function with one or more of it&amp;#39;s arguments already applied.&lt;/p&gt;
+&lt;p&gt;Reusable code is very important. In any application, having smaller, more immutable functions can be very helpful for the same operations that may need to take place many times.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Let&amp;#39;s look at a simple example:&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/mbjordan/03ad754135035c9e1362.js?file=simple.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;The &lt;code&gt;simpleAddition&lt;/code&gt; function accepts two arguments, and adds them together. The partial returned a new function that had already been passed &lt;code&gt;20&lt;/code&gt; as it&amp;#39;s &lt;code&gt;a&lt;/code&gt; argument. This new function will now accept any Number (as it&amp;#39;s &lt;code&gt;b&lt;/code&gt; argument) and add &lt;code&gt;20&lt;/code&gt; to it.&lt;/p&gt;
+&lt;p&gt;The above example is basic, but it should give you a good understanding of what is going on.&lt;/p&gt;
+&lt;p&gt;Now, let&amp;#39;s look at a basic partial-creation function:&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/mbjordan/03ad754135035c9e1362.js?file=partial.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;This can be used with any number of arguments the original function needs, but they &lt;em&gt;must&lt;/em&gt; be applied in order, and the arity must match by the second call.&lt;/p&gt;
+&lt;p&gt;There are a few good libraries out there with solid implementations of partials. Check &amp;#39;em out:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://ramdajs.com/0.17/docs/#partial&quot;&gt;Ramda&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://lodash.com/docs#partial&quot;&gt;Lodash&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://underscorejs.org/#partial&quot;&gt;Underscore&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description></item><item><title>Branching for Github Pages</title><link>https://honyovk.com/articles/branching-github-pages/</link><author></author><pubDate>Thu, 15  Aug 2013 20:00:00 -0400</pubDate><guid isPermaLink="true">https://honyovk.com/articles/branching-github-pages/</guid><description>&lt;p&gt;GitHub repos that also have a Pages branch are getting more commonplace, and maintaining these branches can a pain in the ass.&lt;/p&gt;
 &lt;p&gt;This is a simple method of adding multiple branches to one working directory. While I am only discussing adding &lt;code&gt;master&lt;/code&gt; and &lt;code&gt;gh-pages&lt;/code&gt; branches, the idea can be used for any branch.&lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h3 id=&quot;intended-directory-structure&quot;&gt;Intended directory structure&lt;/h3&gt;
