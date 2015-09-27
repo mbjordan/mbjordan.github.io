@@ -8,7 +8,7 @@ block content
         h2
           a(href=article.url)= article.title
         p.date
-          span= moment.utc(article.date).format('MMMM DD, YYYY')
+          span= moment.utc(article.date).format('MM/DD/YYYY')
       section.content
         | !{ typogr(article.intro).typogrify() }
         if article.hasMore

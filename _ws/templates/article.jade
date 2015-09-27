@@ -11,7 +11,7 @@ block header
   h2= page.title
   p.author
     | Written
-    span= " " + moment.utc(page.metadata.date).format('MMM DD, YYYY') + " "
+    span= " " + moment.utc(page.metadata.date).format('MMM. DD, YYYY') + " "
     | by #{page.__env.locals.owner}
 
 block content
