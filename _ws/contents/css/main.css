@@ -55,17 +55,19 @@ blockquote {
 }
 
 #content p.more a {
-    background-color: #f69373;
-    color: #fff;
+    background-color: #fff;
+    border: 1px solid #f26233;
+    color: #f26233;
     cursor: pointer;
     display: inline-block;
     padding: 5px 10px;
-    font-size: 0.9em;
-    transition: background-color 0.2s ease-in-out 0s
+    font-size: 0.8em;
+    /*transition: background-color 0.2s ease-in-out 0s*/
 }
 
 #content p.more a:hover {
-    background-color: #f26233
+    background-color: #f26233;
+    color: #fff;
 }
 
 aside {
@@ -76,7 +78,8 @@ aside {
     height: 100%;
     background-color: #f26233;
     color: #fff;
-    padding: 0 24px
+    padding: 0 24px;
+    text-align: center;
 }
 
 aside h1 a {
