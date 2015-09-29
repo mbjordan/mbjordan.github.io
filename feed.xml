@@ -1,4 +1,43 @@
-<?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>honyovk</title><atom:link href="https://honyovk.com/feed.xml" rel="self" type="application/rss+xml"></atom:link><link>https://honyovk.com</link><description>Stuff about Things</description><pubDate>Thu, 24 Sep 2015 20:00:00 -0400</pubDate><language>en</language><item><title>Partial Functions in JavaScript</title><link>https://honyovk.com/articles/partial-functions-javascript/</link><author></author><pubDate>Thu, 24 Sep 2015 20:00:00 -0400</pubDate><guid isPermaLink="true">https://honyovk.com/articles/partial-functions-javascript/</guid><description>&lt;p&gt;A partial is a function that returns a new function with one or more of it&amp;#39;s arguments already applied.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>honyovk</title><atom:link href="https://honyovk.com/feed.xml" rel="self" type="application/rss+xml"></atom:link><link>https://honyovk.com</link><description>Stuff about Things</description><pubDate>Mon, 28 Sep 2015 20:00:00 -0400</pubDate><language>en</language><item><title>Promises &amp; Partials</title><link>https://honyovk.com/articles/promises-partials/</link><author></author><pubDate>Mon, 28 Sep 2015 20:00:00 -0400</pubDate><guid isPermaLink="true">https://honyovk.com/articles/promises-partials/</guid><description>&lt;p&gt;As a full-stack JavaScript engineer, I work on a happy mix of both back-end and front-end projects.&lt;/p&gt;
+&lt;p&gt;On the front-end side of the stack, I write my fair share of AJAX calls. That is, getting and setting data from back-end services. Among the many different tools to accomplish this, I find using promises &amp;amp; partials to be very useful.&lt;/p&gt;
+&lt;p&gt;The functional pattern of getting XHR data with promises and partials allows one to write code that is more immutable and reusable.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&quot;the-partials&quot;&gt;The Partials&lt;/h3&gt;
+&lt;p&gt;Let&amp;#39;s say we have a website, and want to display a certain user&amp;#39;s profile from an AJAX call. We could create a simple jQuery function to do this:&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/mbjordan/1a0febf9375bf5648801.js?file=getUserProfileAndDisplay.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;That&amp;#39;s simple enough right? All you&amp;#39;d need to do is call &lt;code&gt;getUserProfileAndDisplay(1234)&lt;/code&gt; and boom!&lt;/p&gt;
+&lt;p&gt;But what if you want to create many functions that perform similar tasks, and don&amp;#39;t want &lt;code&gt;n&lt;/code&gt; number of functions that are only slightly different? Partials can help!&lt;/p&gt;
+&lt;p&gt;First, let&amp;#39;s start with a basic function that creates &lt;a href=&quot;https://honyovk.com/articles/partial-functions-javascript/&quot;&gt;partials&lt;/a&gt;:&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/mbjordan/1a0febf9375bf5648801.js?file=partial.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Great! Now we can create a basic &lt;code&gt;ajaxGetter&lt;/code&gt; function:&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/mbjordan/1a0febf9375bf5648801.js?file=ajaxGetter.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;If you notice that the &lt;code&gt;ajaxGetterExecutor&lt;/code&gt; function accepts four arguments, while the &lt;code&gt;ajaxGetter&lt;/code&gt; function only accepts two, you&amp;#39;ll see that we&amp;#39;re creating a partial function inside &lt;code&gt;ajaxGetter&lt;/code&gt; with &lt;code&gt;url, data&lt;/code&gt; already applied. Now, the only arguments left to fulfill are the &lt;code&gt;resolve&lt;/code&gt; and &lt;code&gt;reject&lt;/code&gt; arguments for the ES6 Promise. &lt;small&gt;(More on Promises in a minute.)&lt;/small&gt;&lt;/p&gt;
+&lt;p&gt;We now have a function named &lt;code&gt;ajaxGetter&lt;/code&gt; that we pass a URL and some optional data. Lets put it to action...&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/mbjordan/1a0febf9375bf5648801.js?file=ajaxGetter.ex1.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;However, we can take this even further by creating yet another partial, this time of &lt;code&gt;ajaxGetter&lt;/code&gt;:&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/mbjordan/1a0febf9375bf5648801.js?file=getUserProfile.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Now we have a function named &lt;code&gt;getUserProfile&lt;/code&gt; that only does one thing, but we also still have &lt;code&gt;ajaxGetter&lt;/code&gt; for any other needed operations.&lt;/p&gt;
+&lt;h3 id=&quot;the-promises&quot;&gt;The Promises&lt;/h3&gt;
+&lt;p&gt;Now that we have a dedicated function for getting user data, &lt;em&gt;naturally&lt;/em&gt; we&amp;#39;ll want to do something with that data. Let&amp;#39;s get a user profile and display some basic parts:&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/mbjordan/1a0febf9375bf5648801.js?file=getUserProfile.ex1.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Boom! That&amp;#39;s easy enough right? But, what if we don&amp;#39;t want a ton of functions that all do the same thing except for which jQuery node they&amp;#39;re inserting into? We can just create a partial of the &lt;code&gt;display&lt;/code&gt; function, and pass it the node we want to update:&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/mbjordan/1a0febf9375bf5648801.js?file=getUserProfile.ex2.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;We know the correct order in which to do this because we&amp;#39;re setting the array in the &lt;code&gt;profileDataToArray&lt;/code&gt; function.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;There&amp;#39;s so much that can be done using Promises &amp;amp; Partials (and even curried functions, but that&amp;#39;s for another time). Please see below for some further reading on the topic:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise&quot;&gt;ES6 Promises&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://honyovk.com/articles/partial-functions-javascript/&quot;&gt;Partials&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift&quot;&gt;Array.shift&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description></item><item><title>Partial Functions in JavaScript</title><link>https://honyovk.com/articles/partial-functions-javascript/</link><author></author><pubDate>Thu, 24 Sep 2015 20:00:00 -0400</pubDate><guid isPermaLink="true">https://honyovk.com/articles/partial-functions-javascript/</guid><description>&lt;p&gt;A partial is a function that returns a new function with one or more of it&amp;#39;s arguments already applied.&lt;/p&gt;
 &lt;p&gt;Reusable code is very important. In any application, having smaller, more immutable functions can be very helpful for the same operations that may need to take place many times.&lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Let&amp;#39;s look at a simple example:&lt;/p&gt;
