@@ -2,6 +2,10 @@ extends layout
 
 block append vars
   - bodyclass = 'article-detail'
+  
+block head
+    meta(name='description' content='#{cleanDescription(page.markdown)}')
+    link(rel="canonical" href="#{locals.url}#{page.url}")
 
 block prepend title
   | #{ page.title + " - "}

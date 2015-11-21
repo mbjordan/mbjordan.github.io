@@ -1,5 +1,9 @@
 extends layout
 
+block head
+    meta(name='description' content='#{description}')
+    link(rel="canonical" href="#{locals.url}/")
+
 block content
   include author
   each article in articles

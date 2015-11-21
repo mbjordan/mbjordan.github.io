@@ -13,10 +13,11 @@
         "moment": "moment",
         "_": "underscore",
         "typogr": "typogr",
-        "marked": "marked"
+        "marked": "marked",
+        "cleanDescription": "./plugins/cleanDescription"
     },
     "jade": {
-        "pretty": false
+        "pretty": true
     },
     "markdown ": {
         "smartLists": true,

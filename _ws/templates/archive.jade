@@ -2,6 +2,11 @@
 extends layout
 //- this logic should be moved to a view at some point
 
+block head
+	meta(name='description' content='honyovk blog archives')
+	link(rel="canonical" href="#{locals.url}#{page.url}")
+
+
 block content
 	- var lineHeight = 2.2;
 	- var archives = _.chain(env.helpers.getArticles(contents)).groupBy(function(item) {

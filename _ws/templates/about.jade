@@ -1,5 +1,9 @@
 extends layout
 
+block head
+    meta(name='description' content='About Matt Jordan - honyovk')
+    link(rel="canonical" href="#{locals.url}#{page.url}")
+
 block append vars
   - bodyclass = 'article-detail'
 
