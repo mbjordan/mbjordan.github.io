@@ -17,7 +17,7 @@
         "cleanDescription": "./plugins/cleanDescription"
     },
     "jade": {
-        "pretty": true
+        "pretty": false
     },
     "markdown ": {
         "smartLists": true,
