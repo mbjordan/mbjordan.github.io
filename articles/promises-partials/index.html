@@ -1,0 +1,41 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><link rel="alternate" href="http://honyovk.com/feed.xml" type="application/rss+xml" title="scribbles &amp; scrawls"><meta name="description" content="As a full-stack JavaScript engineer, I work on a happy mix of both back-end and front-end projects.On the front-end side of the stack, I write my fair..."><link rel="canonical" href="http://honyovk.com/articles/promises-partials/"><title>Promises &amp; Partials - honyovk</title><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/main.min.css"></head><body><aside><h1><a href="http://honyovk.com">honyovk</a></h1><p class="description">scribbles &amp; scrawls</p><div class="footer"><div class="nav"><a href="/">« Full blog</a></div><p>&copy; 2015 <a href="https://twitter.com/honyovk">Matt Jordan</a>&nbsp;|&nbsp;<a href="/articles/about.html">About</a></p></div></aside><div id="content"><h2>Promises &amp; Partials</h2><p class="author">Written<span> Sep. 29, 2015 </span>by Matt Jordan</p><article class="article"><section class="content"><p>As a full-stack JavaScript engineer, I work on a happy mix of both back-end and front-end&nbsp;projects.</p>
+<p>On the front-end side of the stack, I write my fair share of <span class="caps">AJAX</span> calls. That is, getting and setting data from back-end services. Among the many different tools to accomplish this, I find using promises <span class="amp">&amp;</span> partials to be very&nbsp;useful.</p>
+<p>The functional pattern of getting <span class="caps">XHR</span> data with promises and partials allows one to write code that is more immutable and&nbsp;reusable.</p>
+<p><span class="more"></span></p>
+<h3 id="the-partials">The&nbsp;Partials</h3>
+<p>Let&#39;s say we have a website, and want to display a certain user&#39;s profile from an <span class="caps">AJAX</span> call. We could create a simple jQuery function to do&nbsp;this:</p>
+<script src="https://gist.github.com/mbjordan/1a0febf9375bf5648801.js?file=getUserProfileAndDisplay.js"></script>
+
+<p>That&#39;s simple enough right? All you&#39;d need to do is call <code>getUserProfileAndDisplay(1234)</code> and&nbsp;boom!</p>
+<p>But what if you want to create many functions that perform similar tasks, and don&#39;t want <code>n</code> number of functions that are only slightly different? Partials can&nbsp;help!</p>
+<p>First, let&#39;s start with a basic function that creates <a href="/articles/partial-functions-javascript/">partials</a>:</p>
+<script src="https://gist.github.com/mbjordan/1a0febf9375bf5648801.js?file=partial.js"></script>
+
+<p>Great! Now we can create a basic <code>ajaxGetter</code> function:</p>
+<script src="https://gist.github.com/mbjordan/1a0febf9375bf5648801.js?file=ajaxGetter.js"></script>
+
+<p>If you notice that the <code>ajaxGetterExecutor</code> function accepts four arguments, while the <code>ajaxGetter</code> function only accepts two, you&#39;ll see that we&#39;re creating a partial function inside <code>ajaxGetter</code> with <code>url, data</code> already applied. Now, the only arguments left to fulfill are the <code>resolve</code> and <code>reject</code> arguments for the <span class="caps">ES6</span> Promise. <small>(More on Promises in a minute.)</small></p>
+<p>We now have a function named <code>ajaxGetter</code> that we pass a <span class="caps">URL</span> and some optional data. Lets put it to&nbsp;action&#8230;</p>
+<script src="https://gist.github.com/mbjordan/1a0febf9375bf5648801.js?file=ajaxGetter.ex1.js"></script>
+
+<p>However, we can take this even further by creating yet another partial, this time of <code>ajaxGetter</code>:</p>
+<script src="https://gist.github.com/mbjordan/1a0febf9375bf5648801.js?file=getUserProfile.js"></script>
+
+<p>Now we have a function named <code>getUserProfile</code> that only does one thing, but we also still have <code>ajaxGetter</code> for any other needed&nbsp;operations.</p>
+<h3 id="the-promises">The&nbsp;Promises</h3>
+<p>Now that we have a dedicated function for getting user data, <em>naturally</em> we&#39;ll want to do something with that data. Let&#39;s get a user profile and display some basic&nbsp;parts:</p>
+<script src="https://gist.github.com/mbjordan/1a0febf9375bf5648801.js?file=getUserProfile.ex1.js"></script>
+
+<p>Boom! That&#39;s easy enough right? But, what if we don&#39;t want a ton of functions that all do the same thing except for which jQuery node they&#39;re inserting into? We can just create a partial of the <code>display</code> function, and pass it the node we want to&nbsp;update:</p>
+<script src="https://gist.github.com/mbjordan/1a0febf9375bf5648801.js?file=getUserProfile.ex2.js"></script>
+
+<p>We know the correct order in which to do this because we&#39;re setting the array in the <code>profileDataToArray</code> function.</p>
+<hr>
+<p>There&#39;s so much that can be done using Promises <span class="amp">&amp;</span> Partials (and even curried functions, but that&#39;s for another time). Please see below for some further reading on the&nbsp;topic:</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><span class="caps">ES6</span>&nbsp;Promises</a></li>
+<li><a href="/articles/partial-functions-javascript/">Partials</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift">Array.shift</a></li>
+</ul>
+</section></article><p style="text-align:right"><a href="https://twitter.com/share" data-via="honyovk" data-dnt="true" class="twitter-share-button">Tweet</a></p><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+</script></div><div class="footer"><div class="nav"><a href="/">« Full blog</a></div><p>&copy; 2015 <a href="https://twitter.com/honyovk">Matt Jordan</a>&nbsp;|&nbsp;<a href="/articles/about.html">About</a></p></div></body></html>
