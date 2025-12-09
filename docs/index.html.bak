@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>honyovk</title>
+    <style type="text/css" media="screen">
+      body {
+        font-family: Courier, monospace;
+        text-align: center;
+        background-color: #191221;
+        color: #eff;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>honyovk</h1>
+  </body>
+</html>
