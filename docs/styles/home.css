@@ -108,3 +108,21 @@ a {
     font-size: 1.6rem;
   }
 }
+
+/* Pixelated flag styles */
+#America-flag {
+  display: block;
+  margin: 0.9rem auto 0 auto;
+  max-width: 100%;
+  height: auto;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  pointer-events: none;
+}
+
+/* Slight spacing tweak when layout is narrow */
+@media (max-width: 420px) {
+  #America-flag {
+    margin-top: 0.6rem;
+  }
+}
