@@ -1,0 +1,14 @@
+:root{
+  --bg:#07090b;
+  --muted:#9aa6a0;
+  --glow:#77ff7a;
+}
+html,body{height:100%;margin:0}
+body{display:flex;align-items:center;justify-content:center;background:var(--bg);color:var(--muted);font-family:Courier,monospace}
+.notfound-wrap{text-align:center;padding:3rem 1rem}
+.notfound-wrap h1{font-size:5rem;margin:0;color:var(--glow)}
+.notfound-wrap .message{margin-top:0.6rem;color:var(--muted)}
+.pitbull-stage{margin:1.2rem auto 0;display:flex;align-items:center;justify-content:center}
+#pit-canvas{width:192px;height:192px;image-rendering:pixelated;border-radius:12px;background:#fff2}
+.home-link{margin-top:1rem}
+.home-link a{color:var(--glow);text-decoration:none}
